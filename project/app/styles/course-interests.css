@@ -1,0 +1,63 @@
+/* course-intrests.css */
+
+.page-container {
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table-heading {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .course-interest-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 0.95rem;
+  }
+  
+  .course-interest-table th,
+  .course-interest-table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .course-interest-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+  }
+  
+  .course-interest-table tr:hover {
+    background-color: #f0fdf4;
+  }
+  
+  .course-interest-table ol {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  
+  .course-interest-table li {
+    margin-bottom: 0.25rem;
+  }
+  
+  .loading-message,
+  .no-data-message {
+    padding: 1rem;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 0.25rem;
+  }
+  
+  .error-message {
+    padding: 1rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+  }
+  

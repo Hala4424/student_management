@@ -1,0 +1,77 @@
+/* Overall page styling */
+.by-category-page {
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+td {
+  background-color: #ffffff;
+  color: #424242;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Card-like styling for each row in the table */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #bbdefb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card h3 {
+  font-size: 18px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #424242;
+  margin-top: 5px;
+}

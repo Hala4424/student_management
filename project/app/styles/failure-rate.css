@@ -1,0 +1,50 @@
+.failure-rate-page {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.failure-rate-page h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.failure-rate-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.failure-rate-page thead {
+  background-color: #fee2e2;
+  color: #7f1d1d;
+  font-weight: bold;
+  text-align: left;
+}
+
+.failure-rate-page th,
+.failure-rate-page td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.failure-rate-page tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.failure-rate-page tbody tr:hover {
+  background-color: #fef2f2;
+}
+
+.failure-rate-page td:last-child {
+  font-weight: bold;
+  color: #dc2626;
+}

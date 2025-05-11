@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Prisma schema example for your models
+// Assumes you are using Prisma with a PostgreSQL or similar relational DB
+
+model User {
+  id                Int                 @id @default(autoincrement())
+  email             String              @unique
+  password          String
+  name              String
+  role              Role
+  pendingCourses    PendingCourse[]
+  completedCourses  CompletedCourse[]
+  inprogressCourses InProgressCourse[]
+  classes           Class[]             @relation("InstructorClasses")
+  interests   Interest[]
+}
+
+enum Role {
+  Student
+  Instructor
+  Administrator
+}
+
+model Course {
+  id          Int            @id @default(autoincrement())
+  code        String
+  name        String
+  category    String
+  classes     Class[]
+  prerequisites Prerequisite[] @relation("CoursePrerequisite")
+  requiredBy    Prerequisite[] @relation("CourseRequiredBy")
+  publishedCourses PublishedCourse[]
+  pendingBy        PendingCourse[]
+}
+
+model Class {
+  id               Int      @id @default(autoincrement())
+  course           Course   @relation(fields: [courseId], references: [id])
+  courseId         Int
+  semester         String
+  year             Int
+  instructor       User     @relation("InstructorClasses", fields: [userId], references: [id])
+  userId           Int
+  availableSeats   Int
+  studentEnrolled  Int
+  isValidated      Int
+  time             String
+  completedBy      CompletedCourse[]
+  inProgressBy     InProgressCourse[]
+}
+
+model Prerequisite {
+  id                  Int     @id @default(autoincrement())
+  course              Course  @relation("CoursePrerequisite", fields: [courseId], references: [id])
+  courseId            Int
+  prerequisiteCourse  Course  @relation("CourseRequiredBy", fields: [prerequisiteCourseId], references: [id])
+  prerequisiteCourseId Int
+}
+
+model CompletedCourse {
+  id        Int     @id @default(autoincrement())
+  class     Class   @relation(fields: [classId], references: [id])
+  classId   Int
+  user      User    @relation(fields: [userId], references: [id])
+  userId    Int
+  grade     String?
+}
+
+model InProgressCourse {
+  id        Int     @id @default(autoincrement())
+  class     Class   @relation(fields: [classId], references: [id])
+  classId   Int
+  user      User    @relation(fields: [userId], references: [id])
+  userId    Int
+  grade     String?
+}
+
+model PendingCourse {
+  id        Int     @id @default(autoincrement())
+  course    Course  @relation(fields: [courseId], references: [id])
+  courseId  Int
+  user      User    @relation(fields: [userId], references: [id])
+  userId    Int
+}
+
+model PublishedCourse {
+  id          Int        @id @default(autoincrement())
+  course      Course     @relation(fields: [courseId], references: [id])
+  courseId    Int
+  semester    String
+  year        Int
+  deadline    DateTime
+  interests   Interest[]
+}
+
+model Interest {
+  id                 Int              @id @default(autoincrement())
+  user               User             @relation(fields: [userId], references: [id])
+  userId             Int
+  publishedCourse    PublishedCourse @relation(fields: [publishedCourseId], references: [id])
+  publishedCourseId  Int
+  status             String
+}
