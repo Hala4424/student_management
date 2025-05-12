@@ -195,7 +195,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\halas\\OneDrive - Qatar University\\Desktop\\project\\student_management\\app\\generated\\prisma",
+      "value": "C:\\Users\\halas\\OneDrive - Qatar University\\Desktop\\project\\student_management\\student_management\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -209,7 +209,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\halas\\OneDrive - Qatar University\\Desktop\\project\\student_management\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\halas\\OneDrive - Qatar University\\Desktop\\project\\student_management\\student_management\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
