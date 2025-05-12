@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "641520d7-e19f-4585-a489-1fc32f8a0afa",
+		"name": "WEB_PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44665072",
+		"_collection_link": "https://haya-9397615.postman.co/workspace/haya's-Workspace~b4f70f19-42e2-4b32-8faf-6ffa8e4d4ac6/collection/44665072-641520d7-e19f-4585-a489-1fc32f8a0afa?action=share&source=collection_link&creator=44665072"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/callback/credentials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"callback",
+						"credentials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "average-gardes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/average-grades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"average-grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/by-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"by-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by-course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/by-course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"by-course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "classes-per-course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/classes-per-course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"classes-per-course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-interests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/course-interests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"course-interests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "failure-rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/failure-rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"failure-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "instructor-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/instructor-stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"instructor-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "overview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/overview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"overview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students-per-year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/students-per-year",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"students-per-year"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top-courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/statistics/top-courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"statistics",
+						"top-courses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
